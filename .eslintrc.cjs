@@ -3,7 +3,12 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ['airbnb', 'plugin:prettier/recommended'],
+  extends: [
+    'airbnb',
+    'eslint:recommended',
+    'plugin:import/recommended',
+    'plugin:prettier/recommended',
+  ],
   overrides: [
     {
       env: {
@@ -22,6 +27,12 @@ module.exports = {
   settings: {
     react: {
       version: 'detect',
+    },
+    'import/resolver': {
+      alias: {
+        map: [['@/*', './src']],
+        extensions: ['.js', '.jsx'],
+      },
     },
   },
   plugins: ['react'],
