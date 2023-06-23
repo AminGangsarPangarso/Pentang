@@ -4,7 +4,7 @@ import { NAVBAR_CONTENT } from '@/contants'
 
 function Mobile() {
   return (
-    <div className='w-full flex gap-2 bg-orange-200 bottom-0 absolute justify-center md:hidden py-5'>
+    <div className='w-full flex gap-2  bottom-0 absolute justify-center md:hidden py-5'>
       <ul className='flex justify-center items-center w-1/2 bg-white rounded-md shadow-md'>
         {NAVBAR_CONTENT.map((val, idx) => {
           return (

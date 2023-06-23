@@ -1,8 +1,14 @@
 import React from 'react'
-import Mobile from '@/Component/Navbar/Mobile'
+import Mobile from '@/Component/Mobile'
+import MobileNav from '@/Component/MobileNav'
 
 function Landing() {
-  return <Mobile />
+  return (
+    <div>
+      <MobileNav />
+      <Mobile />
+    </div>
+  )
 }
 
 export default Landing
