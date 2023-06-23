@@ -47,6 +47,8 @@ module.exports = {
     '@typescript-eslint/no-empty-function': ['off'],
     '@typescript-eslint/no-explicit-any': ['off'],
     'react-hooks/exhaustive-deps': ['off'],
+    'import/prefer-default-export': ['off'],
+    'react/no-array-index-key': ['off'],
     'prettier/prettier': ['error', {}, { usePrettierrc: true }],
     'no-duplicate-imports': 'error',
   },

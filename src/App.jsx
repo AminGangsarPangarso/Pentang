@@ -1,8 +1,9 @@
 import React from 'react'
-import NavbarDesktop from '@/Component/Navbar/Desktop'
+import { RouterProvider } from 'react-router-dom'
+import router from './routes'
 
 function App() {
-  return <NavbarDesktop />
+  return <RouterProvider router={router} />
 }
 
 export default App
