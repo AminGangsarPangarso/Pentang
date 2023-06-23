@@ -1,15 +1,42 @@
 module.exports = {
-  env: { browser: true, es2020: true },
-  extends: [
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:react/jsx-runtime',
-    'plugin:react-hooks/recommended',
+  env: {
+    browser: true,
+    es2021: true,
+  },
+  extends: ['airbnb', 'plugin:prettier/recommended'],
+  overrides: [
+    {
+      env: {
+        node: true,
+      },
+      files: ['.eslintrc.{js,cjs}'],
+      parserOptions: {
+        sourceType: 'script',
+      },
+    },
   ],
-  parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
-  settings: { react: { version: '18.2' } },
-  plugins: ['react-refresh'],
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+  },
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
+  plugins: ['react'],
   rules: {
-    'react-refresh/only-export-components': 'warn',
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+
+    'linebreak-style': ['error', 'unix'],
+    'react/prop-types': 'off',
+    '@typescript-eslint/explicit-function-return-type': ['off'],
+    '@typescript-eslint/explicit-module-boundary-types': ['off'],
+    '@typescript-eslint/no-empty-function': ['off'],
+    '@typescript-eslint/no-explicit-any': ['off'],
+    'react-hooks/exhaustive-deps': ['off'],
+    'prettier/prettier': ['error', {}, { usePrettierrc: true }],
+    'no-duplicate-imports': 'error',
   },
 }
